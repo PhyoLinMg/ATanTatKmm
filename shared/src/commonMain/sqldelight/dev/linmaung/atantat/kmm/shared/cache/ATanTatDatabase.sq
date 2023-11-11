@@ -1,0 +1,16 @@
+CREATE TABLE Students (
+    id INTEGER PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    class TEXT NOT NULL
+);
+
+selectAllStudents:
+SELECT name,class FROM Students;
+
+insertStudent:
+INSERT INTO Students(name, class)
+VALUES (:name, :className);
+
+deleteStudent:
+DELETE FROM Students WHERE id=:id;
+
